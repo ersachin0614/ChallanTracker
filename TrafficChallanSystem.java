@@ -23,11 +23,11 @@ public class TrafficChallanSystem {
 
             switch (choice) {
                 case 1: // Issue a Chalan
-                    // Take input for vehicle details
+                    
                     String vehicleNumber;
                     while (true) {
                         System.out.print("\nEnter Vehicle Number (e.g., ABC1234, AB1234CD): ");
-                        vehicleNumber = scanner.nextLine().trim();  // Strip leading/trailing spaces
+                        vehicleNumber = scanner.nextLine().trim();  
                         if (isValidVehicleNumber(vehicleNumber)) {
                             break;
                         } else {
@@ -49,7 +49,7 @@ public class TrafficChallanSystem {
                     String vehicleType;
                     while (true) {
                         System.out.print("\nEnter Vehicle Type (Car/Bike/Truck/E-Riksha/E-Car): ");
-                        vehicleType = scanner.nextLine().trim();  // Strip leading/trailing spaces
+                        vehicleType = scanner.nextLine().trim();  
                         if (isValidVehicleType(vehicleType)) {
                             break;
                         } else {
@@ -57,14 +57,13 @@ public class TrafficChallanSystem {
                         }
                     }
 
-                    // Create the Vehicle object
                     Vehicle vehicle = new Vehicle(vehicleNumber, ownerName, vehicleType);
 
                     // Take input for violation details
                     String violationType;
                     while (true) {
                         System.out.print("\nEnter Violation Type (e.g., Speeding, No Helmet, etc.): ");
-                        violationType = scanner.nextLine().trim();  // Strip leading/trailing spaces
+                        violationType = scanner.nextLine().trim();  
                         if (!violationType.isEmpty()) {
                             break;
                         } else {
